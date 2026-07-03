@@ -1,6 +1,6 @@
 const User=require('../models/User');
 const jwt=require('jsonwebtoken')
-const tokenBlackListModel = require("../models/BlackList")
+const tokenBlacklistModel = require("../models/Blacklist")
 
 async function authMiddleware(req,res,next){
     const token = req.cookies.token || req.headers.authorization?.split(" ")[1];
